@@ -1,0 +1,14 @@
+//Abstracts
+@import 'scss/abstracts/variables';
+
+//Base
+@import 'scss/base/general';
+@import 'scss/base/reset';
+
+//Components
+@import 'scss/components/user-image';
+@import 'scss/components/logo';
+@import 'scss/components/dropdown';
+
+//Layouts
+@import 'scss/layouts/header.scss';
