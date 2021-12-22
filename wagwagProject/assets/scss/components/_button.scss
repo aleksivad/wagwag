@@ -1,0 +1,59 @@
+.btn {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+
+    width: 100%;
+    height: 50px;
+
+    border: none;
+    outline: none;
+    border-radius: 10px;
+
+    background-color: $blue;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+
+    transition: 1s ease;
+
+    &.topic {
+        height: 32px;
+        background-color: transparent;
+        color: $text_color;
+
+        transition: none;
+
+        &:nth-child(2) {
+            margin: 0px 5px;
+        }
+
+        &.active {
+            background-color: $blue;
+            color: white;
+        }
+
+        &:hover {
+            background-color: $hover_blue;
+        }
+    }
+
+    &.close {
+        width: 20px;
+        height: 20px;
+        margin: 0px 10px;
+
+        color: $text_color;
+        background-color: transparent;
+
+        .fa {
+            font-size: 18px;
+        }
+    }
+
+    &.start_topic {
+        &:hover {
+            background-color: $purple;
+        }
+    }
+}

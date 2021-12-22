@@ -1,0 +1,37 @@
+.topics {
+    .topics_filters {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .btn {
+        &.topic {
+            font-weight: 400;
+        }
+    }
+}
+
+.city_topic {
+    .city_topics {
+        .city {
+            display: flex;
+            align-items: center;
+            justify-content:  space-between;
+
+            color: $text_color;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 10px 20px;
+            border-radius: 10px;
+
+            &.zero {
+                color: $gray;
+            }
+
+            &:hover {
+                background-color:  $hover_blue;
+            }
+        }
+    }
+}
