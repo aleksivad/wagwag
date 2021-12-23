@@ -1,16 +1,6 @@
 .user_container {
     display: flex;
 
-    .user_img {
-        border-radius: 50%;
-
-        img {
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-        }
-    }
-
     .language {
         display: flex;
         flex-direction: column;
@@ -25,5 +15,16 @@
                 padding-left: 10px;
             }
         }
+    }
+}
+
+.user_img {
+    border-radius: 50%;
+
+    img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        object-fit: cover;
     }
 }

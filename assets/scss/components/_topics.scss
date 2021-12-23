@@ -34,4 +34,25 @@
             }
         }
     }
+
+    &.top_members {
+        .city_topics {
+            .city {
+                flex-direction: row-reverse;
+                padding: 5px 0px;
+
+                p {
+                    width: 100%;
+                }
+
+                .user_img {
+                    img {
+                        width: 32px;
+                        height: 32px;
+                        margin: 0px 10px;
+                    }
+                }
+            }
+        }
+    }
 }
