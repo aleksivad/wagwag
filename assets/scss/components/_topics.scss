@@ -41,6 +41,10 @@
                 flex-direction: row-reverse;
                 padding: 5px 0px;
 
+                &:hover {
+                    background-color: transparent;
+                }
+
                 p {
                     width: 100%;
                 }

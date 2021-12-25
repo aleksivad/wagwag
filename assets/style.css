@@ -34,6 +34,10 @@ body::-webkit-scrollbar {
   color: #396268;
 }
 
+.red {
+  color: #C90000;
+}
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -130,6 +134,15 @@ html {
 }
 
 .user_img {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 50%;
 }
 
@@ -139,6 +152,14 @@ html {
   border-radius: 50%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+.user_img.user_red {
+  border: 3px solid #C90000;
+}
+
+.user_img.user_blue {
+  border: 3px solid #55C2C1;
 }
 
 .logo {
@@ -298,6 +319,10 @@ html {
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
   padding: 5px 0px;
+}
+
+.city_topic.top_members .city_topics .city:hover {
+  background-color: transparent;
 }
 
 .city_topic.top_members .city_topics .city p {
@@ -460,6 +485,153 @@ html {
   background-color: #6B55C2;
 }
 
+.post {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin: 30px 0px;
+  padding: 20px 20px 20px 0px;
+  border-radius: 10px;
+  -webkit-box-shadow: 6px 6px 15px #BEBEBE;
+          box-shadow: 6px 6px 15px #BEBEBE;
+  background-color: white;
+}
+
+.post .post_like {
+  width: 65px;
+  text-align: right;
+}
+
+.post .post_like i, .post .post_like p {
+  color: #bdbdbd;
+  font-size: 18px;
+}
+
+.post .post_like.blue p, .post .post_like.blue .up {
+  color: #55C2C1;
+}
+
+.post .post_like.red p, .post .post_like.red .down {
+  color: #C90000;
+}
+
+.post .post_like p {
+  padding: 5px 0px;
+  font-weight: bold;
+}
+
+.post .post_content {
+  width: 100%;
+  padding: 10px 20px;
+}
+
+.post .post_content_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+
+.post .post_content_title_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: 900;
+  color: black;
+}
+
+.post .post_content_message {
+  font-size: 15px;
+  color: #363636;
+  padding-bottom: 20px;
+}
+
+.post .post_content_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.post .post_content_media_imgs {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 50%;
+}
+
+.post .post_content_media_imgs img {
+  width: 30%;
+}
+
+.post .post_content_media_imgs img:nth-child(2) {
+  margin: 0px 10px;
+}
+
+.post .post_content_media_map {
+  width: 50%;
+  margin-left: 10px;
+}
+
+.post .post_content_media_map img {
+  width: 100%;
+}
+
+.post .post_content_options {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 20px;
+  font-size: 12px;
+  color: #bdbdbd;
+}
+
+.post .post_content_options_interaction {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post .post_content_options_interaction div:nth-child(2) {
+  padding: 0px 20px;
+}
+
+.badge {
+  display: table-cell;
+  vertical-align: middle;
+  height: 24px;
+  margin-left: 20px;
+  padding: 3px 5px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: 900;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: white;
+  background-color: #C90000;
+}
+
+.badge.blue {
+  background-color: #55C2C1;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -542,5 +714,6 @@ main aside .section {
 
 main .main_container {
   width: 100%;
+  padding: 10px 40px;
 }
 /*# sourceMappingURL=style.css.map */

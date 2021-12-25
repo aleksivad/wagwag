@@ -1,0 +1,21 @@
+.badge {
+    display: table-cell;
+    vertical-align: middle;
+
+    height: 24px;
+    margin-left: 20px;
+    padding: 3px 5px;
+    border-radius: 5px;
+
+    font-size: 15px;
+    font-weight: 900;
+    line-height: 19px;
+    text-transform: uppercase;
+
+    color: white;
+    background-color: $red;
+
+    &.blue {
+        background-color: $blue;
+    }
+}

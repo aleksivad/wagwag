@@ -1,0 +1,113 @@
+.post {
+    display: flex;
+    position: relative;
+
+    margin: 30px 0px;
+    padding: 20px 20px 20px 0px;
+    border-radius: 10px;
+    box-shadow: 6px 6px 15px $gray;
+
+    background-color: white;
+
+    .post_like {
+        width: 65px;
+        text-align: right;
+
+        i, p {
+            color: $gray_text;
+            font-size: 18px;
+        }
+
+        &.blue {
+            p, .up {
+                color: $blue;
+            }
+        }
+
+        &.red {
+            p, .down {
+                color: $red;
+            }
+        }
+
+        p {
+            padding: 5px 0px;
+            font-weight: bold;
+        }
+    }
+
+    .post_content {
+        width: 100%;
+        padding: 10px 20px;
+
+        &_title {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            width: 100%;
+
+            &_text {
+                display: flex;
+                align-items: center;
+
+                padding-bottom: 20px;
+                font-size: 25px;
+                font-weight: 900;
+                color: black;
+            }
+        }
+
+        &_message {
+            font-size: 15px;
+            color: $post_text_black;
+            padding-bottom: 20px;
+        }
+
+        &_media {
+            display: flex;
+            justify-content: space-between;
+
+            &_imgs {
+                display: flex;
+                width: 50%;
+
+                img {
+                    width: 30%;
+
+                    &:nth-child(2) {
+                        margin: 0px 10px;
+                    }
+                }
+            }
+
+            &_map {
+                width: 50%;
+                margin-left: 10px;
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+
+        &_options {
+            display: flex;
+            justify-content: space-between;
+
+            padding-top: 20px;
+            font-size: 12px;
+            color: $gray_text;
+
+            &_interaction {
+                display: flex;
+
+                div {
+                    &:nth-child(2) {
+                        padding: 0px 20px;
+                    }
+                }
+            }
+        }
+    }
+}

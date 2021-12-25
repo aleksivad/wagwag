@@ -19,6 +19,10 @@
 }
 
 .user_img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
     border-radius: 50%;
 
     img {
@@ -26,5 +30,13 @@
         height: 40px;
         border-radius: 50%;
         object-fit: cover;
+    }
+
+    &.user_red {
+        border: 3px solid $red;
+    }
+
+    &.user_blue{
+        border: 3px solid $blue;
     }
 }
