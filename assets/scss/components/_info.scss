@@ -1,0 +1,38 @@
+.info_container {
+    display: flex;
+    align-items: center;
+
+    border-radius: 10px;
+
+    background-color: $hover_blue;
+
+    .logo {
+        transform: rotate(-90deg);
+
+        img {
+            width: 107px;
+            height: 26px;
+        }
+    }
+
+    &_content {
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+
+        &_title {
+            padding-bottom: 20px;
+
+            font-size: 25px;
+            font-weight: bold;
+            text-align: center;
+
+            color: $black;
+        }
+
+        &_text {
+            font-size: 15px;
+            color: $post_text_black;
+        }
+    }
+}

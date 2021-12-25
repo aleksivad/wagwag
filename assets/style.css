@@ -162,14 +162,9 @@ html {
   border: 3px solid #55C2C1;
 }
 
-.logo {
-  font-weight: 900;
-  font-size: 30px;
-  color: #55c2c1;
-}
-
-.logo span {
-  color: #396268;
+.logo img {
+  width: 155px;
+  height: 40px;
 }
 
 .dropdown {
@@ -630,6 +625,46 @@ html {
 
 .badge.blue {
   background-color: #55C2C1;
+}
+
+.info_container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 10px;
+  background-color: #55c2c040;
+}
+
+.info_container .logo {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+}
+
+.info_container .logo img {
+  width: 107px;
+  height: 26px;
+}
+
+.info_container_content {
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+.info_container_content_title {
+  padding-bottom: 20px;
+  font-size: 25px;
+  font-weight: bold;
+  text-align: center;
+  color: #303030;
+}
+
+.info_container_content_text {
+  font-size: 15px;
+  color: #363636;
 }
 
 header {
