@@ -1,0 +1,39 @@
+.manage_topic {
+    display: flex;
+    flex-direction: column;
+
+    position: absolute;
+    bottom: 0;
+    left: 0;
+
+    &_container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        width: 65px;
+        height: 84px;
+
+        font-size: 10px;
+        font-weight: 700;
+
+        &:first-child {
+            border: 1px solid $gray_text_trans;
+            border-radius: 0px 10px 0px 0px;
+            color: $gray_text_trans;
+        }
+
+        &:last-child {
+            border: 1px solid $gray;
+            border-radius: 0px 0px 0px 10px;
+            background-color: $blue;
+            color: white;
+        }
+
+        i {
+            font-size: 35px;
+            padding-bottom: 5px;
+        }
+    }
+}
