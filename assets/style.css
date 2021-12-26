@@ -146,6 +146,9 @@ html {
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 50%;
 }
 
@@ -163,6 +166,63 @@ html {
 
 .user_img.user_blue {
   border: 3px solid #55C2C1;
+}
+
+.profile {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  right: 0;
+}
+
+.profile .user_status {
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 10px;
+}
+
+.profile .user_status .user_name {
+  font-size: 15px;
+  color: #BEBEBE;
+  padding: 3px 0px;
+}
+
+.profile .like {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 15px;
+  font-weight: bold;
+  color: #55C2C1;
+}
+
+.profile .like img {
+  width: 24px;
+  height: 24px;
+  padding-right: 3px;
+}
+
+.profile .dislike {
+  color: #C90000;
+}
+
+.profile:hover .user_status {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .logo img {
@@ -549,7 +609,9 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
   width: 100%;
+  padding-bottom: 20px;
 }
 
 .post .post_content_title_text {
@@ -790,6 +852,8 @@ html {
   height: 84px;
   font-size: 10px;
   font-weight: 700;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .manage_topic_container:first-child {
@@ -808,6 +872,38 @@ html {
 .manage_topic_container i {
   font-size: 35px;
   padding-bottom: 5px;
+}
+
+.manage_topic_container.closed {
+  background-color: #6B55C2;
+}
+
+.manage_topic_container.delete {
+  background-color: #C90000;
+  color: white;
+}
+
+nav {
+  padding: 20px 10px;
+}
+
+nav .navigation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+nav .navigation_item {
+  list-style-type: none;
+  font-size: 10px;
+  font-weight: bold;
+  color: #888888;
 }
 
 header {

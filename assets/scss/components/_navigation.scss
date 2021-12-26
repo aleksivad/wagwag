@@ -1,0 +1,16 @@
+nav {
+    padding: 20px 10px;
+
+    .navigation {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        &_item {
+            list-style-type: none;
+            font-size: 10px;
+            font-weight: bold;
+            color: $nav_gray;
+        }
+    }
+}

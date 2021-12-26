@@ -24,6 +24,7 @@
     align-items: center;
 
     width: fit-content;
+    height: fit-content;
     border-radius: 50%;
 
     img {
@@ -39,5 +40,52 @@
 
     &.user_blue{
         border: 3px solid $blue;
+    }
+}
+
+.profile {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    right: 0;
+
+    .user_status {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+
+        margin-right: 10px;
+
+        .user_name {
+            font-size: 15px;
+            color: $gray;
+            padding: 3px 0px;
+        }
+    }
+
+    .like {
+        display: flex;
+        align-items: center;
+
+        font-size: 15px;
+        font-weight: bold;
+
+        color: $blue;
+
+        img {
+            width: 24px;
+            height: 24px;
+            padding-right: 3px;
+        }
+    }
+
+    .dislike {
+        color: $red;
+    }
+
+    &:hover {
+        .user_status {
+            display: flex;
+        }
     }
 }

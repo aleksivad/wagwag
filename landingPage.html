@@ -160,8 +160,22 @@
                 <div class="post_content">
                     <div class="post_content_title">
                         <h3 class="post_content_title_text">My dog run away! HELP!!! <div class="badge"><p>LOST PET ALERT</p></div></h3>
-                        <div class="user_img user_blue">
-                            <img src="./assets/img/Roma.jpg" alt="User">
+
+                        <div class="profile">
+                            <div class="user_status">
+                                <div class="like">
+                                    <img src="./assets/img/like.png" alt="Like">
+                                    <p>51</p>
+                                </div>
+                                <p class="user_name">Michael Jenkins</p>
+                                <div class="like dislike">
+                                    <img src="./assets/img/dislike.png" alt="Dislike">
+                                    <p>51</p>
+                                </div>
+                            </div>
+                            <div class="user_img user_blue">
+                                <img src="./assets/img/Roma.jpg" alt="User">
+                            </div>
                         </div>
                     </div>
 
@@ -513,7 +527,7 @@
                         <span>TOPIC</span>
                     </div>
 
-                    <div class="manage_topic_container close">
+                    <div class="manage_topic_container" id="closed" onclick="closeTopic()">
                         <i class="fa fa-check"></i>
                         <span>MARK</span>
                         <span>TOPIC AS</span>
@@ -581,14 +595,28 @@
                     GO TO BLOG
                 </button>
             </div>
+
+            <nav>
+                <ul class="navigation">
+                    <li class="navigation_item">About Us</li>
+                    <li class="navigation_item">Contact</li>
+                    <li class="navigation_item">Blog</li>
+                    <li class="navigation_item">Help</li>
+                </ul>
+            </nav>
         </aside>
     </main>
 
     <script>
         let comments = document.getElementById('comments');
+        let closed = document.getElementById('closed');
 
         const toggleComments = () => {
             comments.classList.toggle("show_comments");
+        }
+
+        const closeTopic = () => {
+            closed.classList.toggle("closed");
         }
     </script>
 </body>

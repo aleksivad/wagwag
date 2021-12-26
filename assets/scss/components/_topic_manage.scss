@@ -17,6 +17,7 @@
 
         font-size: 10px;
         font-weight: 700;
+        transition: 1s ease;
 
         &:first-child {
             border: 1px solid $gray_text_trans;
@@ -34,6 +35,15 @@
         i {
             font-size: 35px;
             padding-bottom: 5px;
+        }
+
+        &.closed {
+            background-color: $purple;
+        }
+
+        &.delete {
+            background-color: $red;
+            color: white;
         }
     }
 }
