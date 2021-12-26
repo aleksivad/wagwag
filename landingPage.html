@@ -150,7 +150,7 @@
         </aside>
 
         <div class="main_container">
-            <section class="post">
+            <section class="post" id="single_post" onclick="showSinglePost()">
                 <div class="post_like blue">
                     <i class="fa fa-arrow-up up"></i>
                     <p class="post_like_num">68</p>
@@ -210,6 +210,111 @@
                         </div>
                         <div class="post_content_options_time">19m ago</div>
                     </div>
+
+                    <div class="post_content_comments">
+                        <div class="post_content_comments_comment">
+                            <div class="post_content_comments_comment_img">
+                                <div class="user_img user_red">
+                                    <img src="./assets/img/Roma.jpg" alt="User">
+                                </div>
+
+                                <div class="post_content_comments_comment_name">
+                                    Caren O. Mannings <span>20m ago</span>
+                                </div>
+                            </div>
+
+                            <div class="post_content_comments_comment_content">
+                                <div class="post_like red">
+                                    <i class="fa fa-arrow-up up"></i>
+                                    <p class="post_like_num">50</p>
+                                    <i class="fa fa-arrow-down down"></i>
+                                </div>
+
+                                <div class="post_message">
+                                    <div class="post_message_text">
+                                        You should be more careful! Your dog is not our problem.
+                                    </div>
+
+                                    <div class="post_content_options">
+                                        <div class="post_content_options_interaction">
+                                            <div>Share</div>
+                                            <div class="red">Report</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post_content_comments_comment">
+                            <div class="post_content_comments_comment_img">
+                                <div class="user_img user_blue">
+                                    <img src="./assets/img/bib.jpg" alt="User">
+                                </div>
+
+                                <div class="post_content_comments_comment_name">
+                                   John Doe <span>32m ago</span>
+                                </div>
+                            </div>
+
+                            <div class="post_content_comments_comment_content">
+                                <div class="post_like black">
+                                    <i class="fa fa-arrow-up up"></i>
+                                    <p class="post_like_num">50</p>
+                                    <i class="fa fa-arrow-down down"></i>
+                                </div>
+
+                                <div class="post_message">
+                                    <div class="post_message_text">
+                                        I think I saw it somewhere around.
+                                    </div>
+
+                                    <div class="post_content_options">
+                                        <div class="post_content_options_interaction">
+                                            <div>Share</div>
+                                            <div class="red">Report</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="post_content_comments_comment">
+                            <div class="post_content_comments_comment_img">
+                                <div class="user_img">
+                                    <img src="./assets/img/klara.jpeg" alt="User">
+                                </div>
+
+                                <div class="post_content_comments_comment_name">
+                                   Jane Smith <span>45m ago</span>
+                                </div>
+                            </div>
+
+                            <div class="post_content_comments_comment_content">
+                                <div class="post_like">
+                                    <i class="fa fa-arrow-up up"></i>
+                                    <p class="post_like_num">50</p>
+                                    <i class="fa fa-arrow-down down"></i>
+                                </div>
+
+                                <div class="post_message">
+                                    <div class="post_message_text">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Libero consequat, et in diam in
+                                        at habitant. Amet nulla euismod id at tempus id ut a aliquet. Aenean condimentum convallis
+                                        nisl amet tempus, ac. Eget pellentesque magna ultrices mattis cras auctor. Scelerisque
+                                        metus risus et sed velit ut donec arcu. Viverra quis elementum, ut felis a. Sit dui,
+                                        quam faucibus tellus.
+                                    </div>
+
+                                    <div class="post_content_options">
+                                        <div class="post_content_options_interaction">
+                                            <div>Share</div>
+                                            <div class="red">Report</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -257,7 +362,7 @@
                 </div>
             </section>
 
-            <section class="info_container">
+            <section class="post info_container">
                 <div class="logo">
                     <img src="./assets/img/logo.png" alt="Logo">
                 </div>
@@ -610,6 +715,7 @@
     <script>
         let comments = document.getElementById('comments');
         let closed = document.getElementById('closed');
+        let singlePost = document.getElementById('single_post');
 
         const toggleComments = () => {
             comments.classList.toggle("show_comments");
@@ -617,6 +723,10 @@
 
         const closeTopic = () => {
             closed.classList.toggle("closed");
+        }
+
+        const showSinglePost = () => {
+            singlePost.classList.toggle("single_post");
         }
     </script>
 </body>

@@ -548,7 +548,7 @@ html {
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  margin: 30px 0px;
+  margin: 0px 0px 30px 0px;
   padding: 20px 20px 20px 0px;
   border-radius: 10px;
   -webkit-box-shadow: 6px 6px 15px #BEBEBE;
@@ -640,6 +640,8 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .post .post_content_media_imgs {
@@ -647,6 +649,8 @@ html {
   display: -ms-flexbox;
   display: flex;
   width: 50%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .post .post_content_media_imgs img {
@@ -660,6 +664,8 @@ html {
 .post .post_content_media_map {
   width: 50%;
   margin-left: 10px;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .post .post_content_media_map img {
@@ -686,6 +692,29 @@ html {
 
 .post_content_options_interaction div:nth-child(2) {
   padding: 0px 20px;
+}
+
+.post.single_post .post_content_media {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.post.single_post .post_content_media_imgs {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  padding-bottom: 20px;
+}
+
+.post.single_post .post_content_media_map {
+  width: 100%;
+}
+
+.post.single_post .post_content_comments {
+  display: block;
 }
 
 .badge {
@@ -718,6 +747,7 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  padding: 0;
   border-radius: 10px;
   background-color: #55c2c040;
 }
