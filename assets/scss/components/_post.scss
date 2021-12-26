@@ -34,6 +34,13 @@
             }
         }
 
+        &.black {
+            p, .up {
+                color: $text_color;
+                font-weight: bold;
+            }
+        }
+
         p {
             padding: 5px 0px;
             font-weight: bold;
@@ -94,22 +101,22 @@
                 }
             }
         }
+    }
 
-        &_options {
+    &_content_options {
+        display: flex;
+        justify-content: space-between;
+
+        padding-top: 20px;
+        font-size: 12px;
+        color: $gray_text;
+
+        &_interaction {
             display: flex;
-            justify-content: space-between;
 
-            padding-top: 20px;
-            font-size: 12px;
-            color: $gray_text;
-
-            &_interaction {
-                display: flex;
-
-                div {
-                    &:nth-child(2) {
-                        padding: 0px 20px;
-                    }
+            div {
+                &:nth-child(2) {
+                    padding: 0px 20px;
                 }
             }
         }

@@ -143,6 +143,9 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
   border-radius: 50%;
 }
 
@@ -521,6 +524,11 @@ html {
   color: #C90000;
 }
 
+.post .post_like.black p, .post .post_like.black .up {
+  color: #396268;
+  font-weight: bold;
+}
+
 .post .post_like p {
   padding: 5px 0px;
   font-weight: bold;
@@ -596,7 +604,7 @@ html {
   width: 100%;
 }
 
-.post .post_content_options {
+.post_content_options {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -608,13 +616,13 @@ html {
   color: #bdbdbd;
 }
 
-.post .post_content_options_interaction {
+.post_content_options_interaction {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.post .post_content_options_interaction div:nth-child(2) {
+.post_content_options_interaction div:nth-child(2) {
   padding: 0px 20px;
 }
 
@@ -679,6 +687,76 @@ html {
 .info_container_content_text {
   font-size: 15px;
   color: #363636;
+}
+
+.post_content_comments {
+  margin: 20px 0px 0px 0px;
+  border-top: 1px solid #BEBEBE;
+  display: none;
+}
+
+.post_content_comments_comment {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding-top: 20px;
+}
+
+.post_content_comments_comment_img, .post_content_comments_comment_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.post_content_comments_comment_img {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.post_content_comments_comment_img .user_img {
+  margin-right: 10px;
+}
+
+.post_content_comments_comment_name {
+  font-size: 12px;
+  font-weight: 900;
+  color: #396268;
+}
+
+.post_content_comments_comment_name span {
+  font-size: 10px;
+  color: #BEBEBE;
+}
+
+.post_content_comments_comment_content {
+  padding-top: 10px;
+}
+
+.post_content_comments_comment_content .post_like {
+  width: 45px;
+}
+
+.post_content_comments_comment_content .post_message {
+  font-size: 12px;
+  padding: 5px 0px 10px 10px;
+}
+
+.post_content_comments.show_comments {
+  display: block;
+}
+
+.more_comments {
+  width: 100%;
+  padding-top: 20px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 900;
+  color: #396268;
 }
 
 header {
