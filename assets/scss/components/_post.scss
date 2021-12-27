@@ -103,6 +103,7 @@
 
                 img {
                     width: 100%;
+                    transition: 1s ease;
                 }
             }
         }
@@ -140,6 +141,10 @@
 
                 &_map {
                     width: 100%;
+
+                    img {
+                        height: 500px;
+                    }
                 }
             }
 

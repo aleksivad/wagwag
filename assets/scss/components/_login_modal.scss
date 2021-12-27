@@ -1,0 +1,94 @@
+.login_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    width: 410px;
+    border-radius: 15px;
+
+    font-size: 15px;
+    color: $post_text_black;
+
+    background-color: white;
+
+    .login {
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid $gray;
+    }
+
+    .register {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+.overlay {
+    .modal_title {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: $text_color;
+
+        h3 {
+            font-weight: 900;
+        }
+
+        .btn {
+            &.close {
+                svg {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+
+    p {
+        padding: 20px 0px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+
+        font-size: 12px;
+
+        label {
+            padding-bottom: 10px;
+        }
+
+        input {
+            height: 30px;
+
+            outline: none;
+            border: 1px solid $gray;
+            border-radius: 5px;
+            margin-bottom: 10px;
+            padding: 0px 10px;
+            color: $post_text_black;
+        }
+
+        .password {
+            display: flex;
+            width: 100%;
+
+            &_box {
+                input {
+                    margin-top: 10px;
+                    width: 100%;
+                }
+
+                &:first-child {
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+
+    .social_media {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

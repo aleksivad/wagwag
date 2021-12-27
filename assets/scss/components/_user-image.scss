@@ -32,6 +32,10 @@
         height: 40px;
         border-radius: 50%;
         object-fit: cover;
+
+        &[src*="avatar"] {
+            border: 1px solid #888888;
+        }
     }
 
     &.user_red {

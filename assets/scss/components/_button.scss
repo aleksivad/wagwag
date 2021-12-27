@@ -39,8 +39,8 @@
     }
 
     &.close {
-        width: 20px;
-        height: 20px;
+        width: 30px;
+        height: 30px;
         margin: 0px 10px;
 
         color: $text_color;
@@ -56,6 +56,24 @@
 
         &:hover {
             background-color: $purple;
+        }
+    }
+}
+
+.loged_in_user {
+    .btn {
+        &.start_topic {
+            &:hover {
+                span {
+                    display: none;
+                }
+
+                &:after {
+                    content: 'CLICK TO LOGIN';
+                }
+
+                background-color: $purple;
+            }
         }
     }
 }

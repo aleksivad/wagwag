@@ -160,6 +160,10 @@ html {
      object-fit: cover;
 }
 
+.user_img img[src*="avatar"] {
+  border: 1px solid #888888;
+}
+
 .user_img.user_red {
   border: 3px solid #C90000;
 }
@@ -311,8 +315,8 @@ html {
 }
 
 .btn.close {
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
   margin: 0px 10px;
   color: #396268;
   background-color: transparent;
@@ -328,6 +332,18 @@ html {
 
 .btn.start_topic:hover {
   background-color: #6B55C2;
+}
+
+.loged_in_user .btn.start_topic:hover {
+  background-color: #6B55C2;
+}
+
+.loged_in_user .btn.start_topic:hover span {
+  display: none;
+}
+
+.loged_in_user .btn.start_topic:hover:after {
+  content: 'CLICK TO LOGIN';
 }
 
 .topics .topics_filters {
@@ -670,6 +686,8 @@ html {
 
 .post .post_content_media_map img {
   width: 100%;
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
 }
 
 .post_content_options {
@@ -711,6 +729,10 @@ html {
 
 .post.single_post .post_content_media_map {
   width: 100%;
+}
+
+.post.single_post .post_content_media_map img {
+  height: 500px;
 }
 
 .post.single_post .post_content_comments {
@@ -934,6 +956,140 @@ nav .navigation_item {
   font-size: 10px;
   font-weight: bold;
   color: #888888;
+}
+
+.login_overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 2;
+  background-color: rgba(93, 92, 92, 0.26);
+}
+
+.blur {
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+  -webkit-filter: blur(15px);
+          filter: blur(15px);
+}
+
+.login_modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 410px;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #363636;
+  background-color: white;
+}
+
+.login_modal .login {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.login_modal .register {
+  width: 100%;
+  padding: 20px;
+}
+
+.overlay .modal_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #396268;
+}
+
+.overlay .modal_title h3 {
+  font-weight: 900;
+}
+
+.overlay .modal_title .btn.close svg {
+  width: 30px;
+  height: 30px;
+}
+
+.overlay p {
+  padding: 20px 0px;
+}
+
+.overlay form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-size: 12px;
+}
+
+.overlay form label {
+  padding-bottom: 10px;
+}
+
+.overlay form input {
+  height: 30px;
+  outline: none;
+  border: 1px solid #BEBEBE;
+  border-radius: 5px;
+  margin-bottom: 10px;
+  padding: 0px 10px;
+  color: #363636;
+}
+
+.overlay form .password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.overlay form .password_box input {
+  margin-top: 10px;
+  width: 100%;
+}
+
+.overlay form .password_box:first-child {
+  margin-right: 10px;
+}
+
+.overlay .social_media {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 header {
