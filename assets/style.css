@@ -995,6 +995,7 @@ nav .navigation_item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
   width: 410px;
   border-radius: 15px;
   font-size: 15px;
