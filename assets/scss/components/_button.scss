@@ -77,3 +77,19 @@
         }
     }
 }
+
+@media (max-width: 900px) {
+    .btn {
+        &.close {
+            width: 25px;
+            height: 25px;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .btn {
+        height: 40px;
+        font-size: 12px;
+    }
+}
