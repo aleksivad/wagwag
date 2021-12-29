@@ -101,6 +101,101 @@
             </div>
         </div>
 
+        <div class="login_overlay overlay">
+            <div class="new_post_modal">
+                <div class="modal_title">
+                    <h3>START A NEW TOPIC</h3>
+                    <button class="btn close">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.49334 0L4.95751 3.535L1.4225 0L0.244171 1.17833L3.77917 4.71333L0.244171 8.24833L1.4225 9.42667L4.95751 5.89167L8.49334 9.42667L9.67167 8.24833L6.13667 4.71333L9.67167 1.17833L8.49334 0Z" fill="#396268"/>
+                        </svg>
+                    </button>
+                </div>
+
+                <div class="new_post_content">
+                    <div class="dropdown">
+                        <div class="dropdown_option">
+                            <label for="select_city">Which City you are currently in?</label>
+                            <select id="select_city" name="select_city" class="dropdown_select">
+                                <option value="" disabled selected hidden>Not selected</option>
+                                <option>Banja Luka</option>
+                                <option>Mostar</option>
+                                <option>Prijedor</option>
+                            </select>
+                        </div>
+
+                        <div class="dropdown_option">
+                            <label for="select_topic">Selest Topic type</label>
+                            <select id="select_topic" name="select_topic" class="dropdown_select">
+                                <option value="" disabled selected hidden>Not selected</option>
+                                <option>Adoption</option>
+                                <option>Pet run</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="request">
+                        <label for="request">Describe your request</label>
+                        <textarea id="request" name="request" rows="8" cols="50"></textarea>
+                    </div>
+
+                    <div class="download_photo">
+                        <p>Add Photo(s)</p>
+
+                        <div class="photos">
+                            <div class="photo photo1">
+                                <label for="img1">
+                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 6V0H10V6H16V10H10V16H6V10H0V6H6ZM12 18V12H18V6H32L35.66 10H42C44.2 10 46 11.8 46 14V38C46 40.2 44.2 42 42 42H10C7.8 42 6 40.2 6 38V18H12ZM26 36C31.52 36 36 31.52 36 26C36 20.48 31.52 16 26 16C20.48 16 16 20.48 16 26C16 31.52 20.48 36 26 36ZM19.6 26C19.6 29.54 22.46 32.4 26 32.4C29.54 32.4 32.4 29.54 32.4 26C32.4 22.46 29.54 19.6 26 19.6C22.46 19.6 19.6 22.46 19.6 26Z" fill="#DBDBDB" fill-opacity="0.6"/>
+                                    </svg>
+                                </label>
+                                <input type="file" id="img1" name="img" accept="image/*">
+                            </div>
+
+                            <div class="photo photo2">
+                                <label for="img2">
+                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 6V0H10V6H16V10H10V16H6V10H0V6H6ZM12 18V12H18V6H32L35.66 10H42C44.2 10 46 11.8 46 14V38C46 40.2 44.2 42 42 42H10C7.8 42 6 40.2 6 38V18H12ZM26 36C31.52 36 36 31.52 36 26C36 20.48 31.52 16 26 16C20.48 16 16 20.48 16 26C16 31.52 20.48 36 26 36ZM19.6 26C19.6 29.54 22.46 32.4 26 32.4C29.54 32.4 32.4 29.54 32.4 26C32.4 22.46 29.54 19.6 26 19.6C22.46 19.6 19.6 22.46 19.6 26Z" fill="#DBDBDB" fill-opacity="0.6"/>
+                                    </svg>
+                                </label>
+                                <input type="file" id="img2" name="img" accept="image/*">
+                            </div>
+
+                            <div class="photo photo3">
+                                <label for="img3">
+                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 6V0H10V6H16V10H10V16H6V10H0V6H6ZM12 18V12H18V6H32L35.66 10H42C44.2 10 46 11.8 46 14V38C46 40.2 44.2 42 42 42H10C7.8 42 6 40.2 6 38V18H12ZM26 36C31.52 36 36 31.52 36 26C36 20.48 31.52 16 26 16C20.48 16 16 20.48 16 26C16 31.52 20.48 36 26 36ZM19.6 26C19.6 29.54 22.46 32.4 26 32.4C29.54 32.4 32.4 29.54 32.4 26C32.4 22.46 29.54 19.6 26 19.6C22.46 19.6 19.6 22.46 19.6 26Z" fill="#DBDBDB" fill-opacity="0.6"/>
+                                    </svg>
+                                </label>
+                                <input type="file" id="img3" name="img" accept="image/*">
+                            </div>
+
+                            <div class="photo photo4">
+                                <label for="img4">
+                                    <svg width="46" height="42" viewBox="0 0 46 42" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M6 6V0H10V6H16V10H10V16H6V10H0V6H6ZM12 18V12H18V6H32L35.66 10H42C44.2 10 46 11.8 46 14V38C46 40.2 44.2 42 42 42H10C7.8 42 6 40.2 6 38V18H12ZM26 36C31.52 36 36 31.52 36 26C36 20.48 31.52 16 26 16C20.48 16 16 20.48 16 26C16 31.52 20.48 36 26 36ZM19.6 26C19.6 29.54 22.46 32.4 26 32.4C29.54 32.4 32.4 29.54 32.4 26C32.4 22.46 29.54 19.6 26 19.6C22.46 19.6 19.6 22.46 19.6 26Z" fill="#DBDBDB" fill-opacity="0.6"/>
+                                    </svg>
+                                </label>
+                                <input type="file" id="img4" name="img" accept="image/*">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pin_map">
+                        <p>Place a Pin to the location of the Topic</p>
+                        <div class="map">
+                            <img src="./assets/img/map2.jpg" alt="Map">
+                        </div>
+                    </div>
+
+                    <button class="btn">
+                        SAVE AND PUBLISH
+                    </button>
+                </div>
+            </div>
+        </div>
+
         <!-- Ne znam kako je logovanog korisnika i dugme u kom se na hover mjenja content najlakse u reaktu uraditi.
         Ja sam zamislila da main container kada korisnik nije ulogovan ima jos i ovo user_not_loged, a ako se uloguje,
         onda se ta klasa ukloni. Ako imate neku drugu zelju popravicu. -->

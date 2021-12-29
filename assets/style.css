@@ -1093,6 +1093,172 @@ nav .navigation_item {
           align-items: center;
 }
 
+.new_post_modal {
+  position: absolute;
+  top: 0;
+  width: 50%;
+  margin: 20px auto;
+  background-color: white;
+}
+
+.new_post_modal .modal_title {
+  padding: 10px 20px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.new_post_modal .new_post_content {
+  padding: 20px;
+}
+
+.new_post_modal .new_post_content .dropdown {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10px 0px;
+}
+
+.new_post_modal .new_post_content .dropdown_option {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40%;
+  padding: 1px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #363636;
+}
+
+.new_post_modal .new_post_content .dropdown_option .dropdown_select {
+  position: relative;
+  margin-top: 10px;
+  height: 31px;
+  border-radius: 5px;
+  padding: 0px 10px;
+  background-color: white;
+}
+
+.new_post_modal .new_post_content .dropdown_option .dropdown_select:focus {
+  outline: none;
+}
+
+.new_post_modal .new_post_content .dropdown_option .dropdown_select option {
+  width: 100%;
+}
+
+.new_post_modal .new_post_content .dropdown_option .dropdown_select option:first-child {
+  border-radius: 5px;
+  border: 1px solid #BEBEBE;
+  color: #bdbdbda6;
+}
+
+.new_post_modal .new_post_content .request {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 10px 0px;
+}
+
+.new_post_modal .new_post_content .request label {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #363636;
+}
+
+.new_post_modal .new_post_content .request textarea {
+  margin: 1px;
+  outline: none;
+  border-radius: 10px;
+  border: 1px solid #BEBEBE;
+  color: #bdbdbda6;
+}
+
+.new_post_modal .new_post_content .download_photo {
+  padding: 10px 0px;
+}
+
+.new_post_modal .new_post_content .download_photo p {
+  margin-bottom: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #363636;
+}
+
+.new_post_modal .new_post_content .download_photo .photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.new_post_modal .new_post_content .download_photo .photos .photo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  border: 1px solid #BEBEBE;
+}
+
+.new_post_modal .new_post_content .download_photo .photos .photo input {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  color: transparent;
+}
+
+.new_post_modal .new_post_content .download_photo .photos .photo input::-webkit-file-upload-button {
+  visibility: hidden;
+}
+
+.new_post_modal .new_post_content .pin_map {
+  padding: 10px 0px;
+}
+
+.new_post_modal .new_post_content .pin_map p {
+  margin-bottom: 5px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #363636;
+}
+
+.new_post_modal .new_post_content .pin_map .map {
+  width: 100%;
+  height: 250px;
+  border-radius: 10px;
+}
+
+.new_post_modal .new_post_content .pin_map .map img {
+  width: 100%;
+  height: 100%;
+}
+
 header {
   display: -webkit-box;
   display: -ms-flexbox;
