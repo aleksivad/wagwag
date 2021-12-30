@@ -1,28 +1,4 @@
-.login_modal {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    display: none;
 
-    width: 410px;
-    border-radius: 15px;
-
-    font-size: 15px;
-    color: $post_text_black;
-
-    background-color: white;
-
-    .login {
-        width: 100%;
-        padding: 20px;
-        border-bottom: 1px solid $gray;
-    }
-
-    .register {
-        width: 100%;
-        padding: 20px;
-    }
-}
 
 .overlay {
     .modal_title {
@@ -91,5 +67,45 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+    }
+}
+
+.login_modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // display: none;
+
+    width: 410px;
+    border-radius: 15px;
+
+    font-size: 15px;
+    color: $post_text_black;
+
+    background-color: white;
+
+    .login {
+        width: 100%;
+        padding: 20px;
+        border-bottom: 1px solid $gray;
+    }
+
+    .register {
+        width: 100%;
+        padding: 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    .login_modal {
+        width: 96%;
+    }
+}
+
+@media (max-height: 786px) {
+    .login_modal {
+        height: 95%;
+        overflow: scroll;
+        justify-content: start;
     }
 }

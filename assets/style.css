@@ -998,36 +998,6 @@ nav .navigation_item {
           filter: blur(15px);
 }
 
-.login_modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  display: none;
-  width: 410px;
-  border-radius: 15px;
-  font-size: 15px;
-  color: #363636;
-  background-color: white;
-}
-
-.login_modal .login {
-  width: 100%;
-  padding: 20px;
-  border-bottom: 1px solid #BEBEBE;
-}
-
-.login_modal .register {
-  width: 100%;
-  padding: 20px;
-}
-
 .overlay .modal_title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1107,7 +1077,53 @@ nav .navigation_item {
           align-items: center;
 }
 
+.login_modal {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 410px;
+  border-radius: 15px;
+  font-size: 15px;
+  color: #363636;
+  background-color: white;
+}
+
+.login_modal .login {
+  width: 100%;
+  padding: 20px;
+  border-bottom: 1px solid #BEBEBE;
+}
+
+.login_modal .register {
+  width: 100%;
+  padding: 20px;
+}
+
+@media (max-width: 500px) {
+  .login_modal {
+    width: 96%;
+  }
+}
+
+@media (max-height: 786px) {
+  .login_modal {
+    height: 95%;
+    overflow: scroll;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
 .new_post_modal {
+  display: none;
   position: absolute;
   top: 0;
   width: 50%;
