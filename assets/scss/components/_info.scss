@@ -37,3 +37,11 @@
         }
     }
 }
+
+@media (max-width: 1300px) {
+    .info_container {
+        &_content {
+            padding: 20px 10px 20px 0px;
+        }
+    }
+}

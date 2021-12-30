@@ -229,6 +229,16 @@ html {
   display: flex;
 }
 
+@media (max-width: 1310px) {
+  .profile .user_status .user_name {
+    max-width: 150px;
+    text-align: center;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
 .logo img {
   width: 155px;
   height: 40px;
@@ -586,7 +596,7 @@ html {
   background-color: white;
 }
 
-.post .post_like {
+.post_like {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -601,35 +611,35 @@ html {
   text-align: right;
 }
 
-.post .post_like i, .post .post_like p {
+.post_like i, .post_like p {
   color: #bdbdbd;
   font-size: 18px;
 }
 
-.post .post_like.blue p, .post .post_like.blue .up {
+.post_like.blue p, .post_like.blue .up {
   color: #55C2C1;
 }
 
-.post .post_like.red p, .post .post_like.red .down {
+.post_like.red p, .post_like.red .down {
   color: #C90000;
 }
 
-.post .post_like.black p, .post .post_like.black .up {
+.post_like.black p, .post_like.black .up {
   color: #396268;
   font-weight: bold;
 }
 
-.post .post_like p {
+.post_like p {
   padding: 5px 0px;
   font-weight: bold;
 }
 
-.post .post_content {
+.post_content {
   width: 100%;
   padding: 10px 20px;
 }
 
-.post .post_content_title {
+.post_content_title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -641,29 +651,28 @@ html {
           justify-content: space-between;
   position: relative;
   width: 100%;
-  padding-bottom: 20px;
+  padding-bottom: 25px;
 }
 
-.post .post_content_title_text {
+.post_content_title_text {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding-bottom: 20px;
   font-size: 25px;
   font-weight: 900;
   color: black;
 }
 
-.post .post_content_message {
+.post_content_message {
   font-size: 15px;
   color: #363636;
   padding-bottom: 20px;
 }
 
-.post .post_content_media {
+.post_content_media {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -674,7 +683,7 @@ html {
   transition: 1s ease;
 }
 
-.post .post_content_media_imgs {
+.post_content_media_imgs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -683,22 +692,22 @@ html {
   transition: 1s ease;
 }
 
-.post .post_content_media_imgs img {
+.post_content_media_imgs img {
   width: 30%;
 }
 
-.post .post_content_media_imgs img:nth-child(2) {
+.post_content_media_imgs img:nth-child(2) {
   margin: 0px 10px;
 }
 
-.post .post_content_media_map {
+.post_content_media_map {
   width: 50%;
   margin-left: 10px;
   -webkit-transition: 1s ease;
   transition: 1s ease;
 }
 
-.post .post_content_media_map img {
+.post_content_media_map img {
   width: 100%;
   -webkit-transition: 1s ease;
   transition: 1s ease;
@@ -751,6 +760,37 @@ html {
 
 .post.single_post .post_content_comments {
   display: block;
+}
+
+@media (max-width: 1375px) {
+  .post_content {
+    padding-left: 10px;
+  }
+}
+
+@media (max-width: 1310px) {
+  .post_content_title {
+    padding-bottom: 15px;
+  }
+  .post_content_title_text {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+  .post_content_title_text .badge {
+    margin-left: 0px;
+    margin-top: 3px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .post {
+    padding: 20px 10px 20px 0px;
+  }
 }
 
 .badge {
@@ -815,6 +855,12 @@ html {
 .info_container_content_text {
   font-size: 15px;
   color: #363636;
+}
+
+@media (max-width: 1300px) {
+  .info_container_content {
+    padding: 20px 10px 20px 0px;
+  }
 }
 
 .post_content_comments {
@@ -949,6 +995,17 @@ html {
   color: white;
 }
 
+@media (max-width: 1375px) {
+  .manage_topic_container {
+    width: 60px;
+    height: 70px;
+  }
+  .manage_topic_container i {
+    font-size: 30px;
+    padding-bottom: 3px;
+  }
+}
+
 nav {
   padding: 20px 10px;
 }
@@ -982,6 +1039,7 @@ nav .navigation_item {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -1465,6 +1523,12 @@ header .search_container .search .input_field::placeholder {
   color: #bdbdbd;
 }
 
+@media (max-width: 1380px) {
+  header {
+    padding: 0px 20px;
+  }
+}
+
 main {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1483,5 +1547,14 @@ main aside .section {
 main .main_container {
   width: 100%;
   padding: 10px 40px;
+}
+
+@media (max-width: 1380px) {
+  main {
+    padding: 90px 20px;
+  }
+  main .main_container {
+    padding: 10px 20px;
+  }
 }
 /*# sourceMappingURL=style.css.map */
