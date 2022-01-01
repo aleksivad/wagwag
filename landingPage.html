@@ -237,14 +237,14 @@
             </header>
 
             <main>
-                <aside>
-                    <div class="section">
-                        <button class="btn start_topic" onclick="openLoginModal()">
-                            <i class="fa fa-plus"></i>
-                            <span>START A NEW TOPIC</span>
-                        </button>
-                    </div>
+                <div class="section start_topic_button" id="bubble">
+                    <button class="btn start_topic" onclick="openLoginModal()">
+                        <i class="fa fa-plus"></i>
+                        <span>START A NEW TOPIC</span>
+                    </button>
+                </div>
 
+                <aside class="left_side_box">
                     <div class="section topics">
                         <h3 class="title">Topics</h3>
 
@@ -955,6 +955,7 @@
         let comments = document.getElementById('comments');
         let closed = document.getElementById('closed');
         let singlePost = document.getElementById('single_post');
+        let bubble = document.getElementById('bubble');
 
         const toggleComments = () => {
             comments.classList.toggle("show_comments");
@@ -971,6 +972,50 @@
         const openLoginModal = () => {
             main.classList.toggle('blur');
         }
+
+        //Ovo je funkcija da se ovo dugme moze pomjerati po ekranu. Ako zelite tu funkcionalnost trebace ovo svakako doraditi.
+        //Prvo, da ne moze izlaziti  izvan okvira ekrana, a drugo da radi samo poslije 1200px sirine ekrana. jer sada ga
+        //mozemo pomjerati i na desktop ekranju, a to nije bas frendly.
+        const move = (e) => {
+            if (e.type === "touchmove") {
+                e.stopPropagation();
+                e.preventDefault();
+
+                bubble.style.top = e.touches[0].clientY + "px";
+                bubble.style.left = e.touches[0].clientX + "px";
+            } else {
+                bubble.style.top = e.clientY + "px";
+                bubble.style.left = e.clientX + "px";
+            }
+        };
+
+        const mouseDown = (e) => {
+            oldPositionY = bubble.style.top;
+            oldPositionX = bubble.style.left;
+
+            if (e.type === "mousedown") {
+                window.addEventListener("mousemove", move);
+            } else {
+                bubble.addEventListener("touchmove", move);
+            }
+        };
+
+        const mouseUp = (e) => {
+            console.log("mouse up");
+            if (e.type === "mouseup") {
+                window.removeEventListener("mousemove", move);
+            } else {
+                bubble.removeEventListener("touchmove", move);
+            }
+        };
+
+        bubble.addEventListener("mousedown", mouseDown);
+
+        bubble.addEventListener("mouseup", mouseUp);
+
+        bubble.addEventListener("touchstart", mouseDown);
+
+        bubble.addEventListener("touchend", mouseUp);
     </script>
 </body>
 </html>

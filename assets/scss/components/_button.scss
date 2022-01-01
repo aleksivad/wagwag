@@ -60,6 +60,12 @@
     }
 }
 
+.start_topic_button {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+}
+
 .loged_in_user {
     .btn {
         &.start_topic {
@@ -73,6 +79,40 @@
                 }
 
                 background-color: $purple;
+            }
+        }
+    }
+}
+
+@media (max-width: 1380px) {
+    .start_topic_button {
+        left: 10px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .start_topic_button {
+        position: fixed;
+        top: auto;
+        bottom: 80px;
+        left: auto;
+        right: 40px;
+        z-index: 5;
+
+        .btn {
+            &.start_topic {
+                border-radius: 50%;
+                width: 64px;
+                height: 64px;
+                background-color: $purple;
+
+                span {
+                    display: none;
+                }
+
+                i {
+                    font-size: 30px;
+                }
             }
         }
     }

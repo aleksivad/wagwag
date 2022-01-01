@@ -14,3 +14,11 @@ nav {
         }
     }
 }
+
+@media (max-width: 1200px) {
+    nav {
+        position: absolute;
+        left: 0;
+
+    }
+}

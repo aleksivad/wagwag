@@ -344,6 +344,12 @@ html {
   background-color: #6B55C2;
 }
 
+.start_topic_button {
+  position: absolute;
+  top: 100px;
+  left: 50px;
+}
+
 .loged_in_user .btn.start_topic:hover {
   background-color: #6B55C2;
 }
@@ -354,6 +360,35 @@ html {
 
 .loged_in_user .btn.start_topic:hover:after {
   content: 'CLICK TO LOGIN';
+}
+
+@media (max-width: 1380px) {
+  .start_topic_button {
+    left: 10px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .start_topic_button {
+    position: fixed;
+    top: auto;
+    bottom: 80px;
+    left: auto;
+    right: 40px;
+    z-index: 5;
+  }
+  .start_topic_button .btn.start_topic {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    background-color: #6B55C2;
+  }
+  .start_topic_button .btn.start_topic span {
+    display: none;
+  }
+  .start_topic_button .btn.start_topic i {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 900px) {
@@ -1029,6 +1064,13 @@ nav .navigation_item {
   color: #888888;
 }
 
+@media (max-width: 1200px) {
+  nav {
+    position: absolute;
+    left: 0;
+  }
+}
+
 .login_overlay {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1537,11 +1579,15 @@ main {
 }
 
 main aside {
-  width: 250px;
+  width: 380px;
 }
 
 main aside .section {
   padding: 10px 0px;
+}
+
+main aside.left_side_box {
+  padding-top: 60px;
 }
 
 main .main_container {
@@ -1555,6 +1601,30 @@ main .main_container {
   }
   main .main_container {
     padding: 10px 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  aside {
+    display: none;
+    width: 0px;
+    -webkit-transition: all 0.3;
+    transition: all 0.3;
+  }
+  aside:first-child {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0px;
+    width: 300px;
+    height: 100%;
+    padding: 10px 20px;
+    border-radius: 0px 10px 10px 0px;
+    background-color: white;
+    -webkit-box-shadow: 6px 6px 15px #bebebe;
+            box-shadow: 6px 6px 15px #bebebe;
+    overflow: auto;
+    z-index: 2;
   }
 }
 /*# sourceMappingURL=style.css.map */
