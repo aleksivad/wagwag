@@ -1,6 +1,6 @@
 main {
     display: flex;
-    padding: 90px 50px;
+    padding: 90px 50px 20px 50px;
 
     aside {
         width: 380px;
@@ -22,7 +22,7 @@ main {
 
 @media (max-width: 1380px) {
     main {
-        padding: 90px 20px;
+        padding: 90px 20px 20px 20px;
 
         .main_container {
             padding: 10px 20px;
@@ -53,6 +53,14 @@ main {
 
             overflow: auto;
             z-index: 2;
+        }
+    }
+}
+
+@media (max-width: 550px) {
+    main {
+        .main_container {
+            padding: 0px;
         }
     }
 }

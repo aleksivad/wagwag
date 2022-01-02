@@ -61,3 +61,10 @@
     font-weight: 900;
     color: $text_color;
 }
+
+@media (max-width: 550px) {
+    .more_comments {
+        font-size: 10px;
+        padding-top: 5px;
+    }
+}

@@ -23,3 +23,20 @@
         background-color: $purple;
     }
 }
+
+@media (max-width: 550px) {
+    .badge {
+        height: 20px;
+        padding: 2px 5px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 400px) {
+    .badge {
+        height: 17px;
+        padding: 0px 5px;
+        font-size: 8px;
+        font-weight: bold;
+    }
+}

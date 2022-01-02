@@ -47,17 +47,3 @@
         }
     }
 }
-
-@media (max-width: 1375px) {
-    .manage_topic {
-        &_container {
-            width: 60px;
-            height: 70px;
-
-            i {
-                font-size: 30px;
-                padding-bottom: 3px;
-            }
-        }
-    }
-}

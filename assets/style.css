@@ -239,6 +239,12 @@ html {
   }
 }
 
+@media (max-width: 800px) {
+  .profile:hover .user_status {
+    display: none;
+  }
+}
+
 .logo img {
   width: 155px;
   height: 40px;
@@ -671,7 +677,7 @@ html {
 
 .post_content {
   width: 100%;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 80px;
 }
 
 .post_content_title {
@@ -681,12 +687,31 @@ html {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   position: relative;
   width: 100%;
   padding-bottom: 25px;
+  margin-left: -70px;
+}
+
+.post_content_title .post_main_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+}
+
+.post_content_title .post_main_title .user_img {
+  margin-right: -70px;
+}
+
+.post_content_title .post_main_title .post_content_options_time {
+  display: none;
 }
 
 .post_content_title_text {
@@ -797,12 +822,6 @@ html {
   display: block;
 }
 
-@media (max-width: 1375px) {
-  .post_content {
-    padding-left: 10px;
-  }
-}
-
 @media (max-width: 1310px) {
   .post_content_title {
     padding-bottom: 15px;
@@ -828,6 +847,145 @@ html {
   }
 }
 
+@media (max-width: 800px) {
+  .post_content {
+    padding: 10px 20px 10px 20px;
+  }
+  .post_content_title {
+    margin-left: 0px;
+  }
+  .post_content_title .post_main_title .user_img {
+    margin-right: 0px;
+  }
+  .post_content_title_text .box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .post_content_title_text .box .post_content_options_time {
+    display: block;
+    font-size: 12px;
+    color: #bdbdbd;
+    padding: 3px 0px 0px 10px;
+  }
+  .post_content_options .post_content_options_time {
+    display: none;
+  }
+  .post_content_options_interaction {
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .post_content_options_interaction div:last-child {
+    display: none;
+  }
+  .post_content_options_interaction div:nth-child(2) {
+    padding: 0;
+  }
+  .post_content_media_imgs {
+    width: 66%;
+  }
+  .post_content_media_imgs img {
+    width: 48%;
+  }
+  .post_content_media_imgs img:nth-child(3) {
+    display: none;
+  }
+  .post_content_media_map {
+    width: 33%;
+    padding-top: 33%;
+    /* 1:1 Aspect Ratio */
+    position: relative;
+  }
+  .post_content_media_map img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  .post_like {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    padding-right: 15px;
+    text-align: left;
+  }
+  .post.single_post .post_content_media_map {
+    padding: 0;
+    height: 200px;
+  }
+  .post.single_post .post_content_media_map img {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+}
+
+@media (max-width: 550px) {
+  .post_content_title {
+    padding-bottom: 10px;
+  }
+  .post_content_title_text {
+    font-size: 20px;
+  }
+  .post_content_title .box .post_content_options_time {
+    font-size: 10px;
+    padding-top: 10px;
+  }
+  .post_content_message {
+    font-size: 14px;
+    padding-bottom: 10px;
+  }
+  .post_like i, .post_like p {
+    font-size: 15px;
+  }
+  .post_like p {
+    padding: 3px 0px;
+  }
+  .user_img img {
+    width: 32px;
+    height: 32px;
+  }
+}
+
+@media (max-width: 400px) {
+  .post_content {
+    padding: 0px 10px;
+  }
+  .post_content_title_text {
+    font-size: 15px;
+  }
+  .post_content_title .box .post_content_options_time {
+    padding-top: 5px;
+  }
+  .post_content_message {
+    font-size: 12px;
+  }
+  .post_content_options {
+    padding-top: 10px;
+  }
+  .post_content_comments_content_content .post_like {
+    width: 15%;
+    padding-right: 0;
+  }
+  .post_content_comments_content_content .post_message {
+    width: 100%;
+  }
+  .post_like p, .post_like i {
+    font-size: 12px;
+  }
+}
+
 .badge {
   display: table-cell;
   vertical-align: middle;
@@ -849,6 +1007,23 @@ html {
 
 .badge.purple {
   background-color: #6B55C2;
+}
+
+@media (max-width: 550px) {
+  .badge {
+    height: 20px;
+    padding: 2px 5px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 400px) {
+  .badge {
+    height: 17px;
+    padding: 0px 5px;
+    font-size: 8px;
+    font-weight: bold;
+  }
 }
 
 .info_container {
@@ -895,6 +1070,20 @@ html {
 @media (max-width: 1300px) {
   .info_container_content {
     padding: 20px 10px 20px 0px;
+  }
+}
+
+@media (max-width: 400px) {
+  .info_container_content_text {
+    font-size: 12px;
+  }
+  .info_container_content_title {
+    font-size: 18px;
+    padding-bottom: 10px;
+  }
+  .info_container .logo img {
+    width: 70px;
+    height: 20px;
   }
 }
 
@@ -968,6 +1157,13 @@ html {
   color: #396268;
 }
 
+@media (max-width: 550px) {
+  .more_comments {
+    font-size: 10px;
+    padding-top: 5px;
+  }
+}
+
 .manage_topic {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1028,17 +1224,6 @@ html {
 .manage_topic_container.delete {
   background-color: #C90000;
   color: white;
-}
-
-@media (max-width: 1375px) {
-  .manage_topic_container {
-    width: 60px;
-    height: 70px;
-  }
-  .manage_topic_container i {
-    font-size: 30px;
-    padding-bottom: 3px;
-  }
 }
 
 nav {
@@ -1575,7 +1760,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 90px 50px;
+  padding: 90px 50px 20px 50px;
 }
 
 main aside {
@@ -1597,7 +1782,7 @@ main .main_container {
 
 @media (max-width: 1380px) {
   main {
-    padding: 90px 20px;
+    padding: 90px 20px 20px 20px;
   }
   main .main_container {
     padding: 10px 20px;
@@ -1625,6 +1810,12 @@ main .main_container {
             box-shadow: 6px 6px 15px #bebebe;
     overflow: auto;
     z-index: 2;
+  }
+}
+
+@media (max-width: 550px) {
+  main .main_container {
+    padding: 0px;
   }
 }
 /*# sourceMappingURL=style.css.map */
