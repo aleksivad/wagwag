@@ -4,3 +4,12 @@
         height: 40px;
     }
 }
+
+@media (max-width: 500px) {
+    .logo {
+        img {
+            width: 130px;
+            height: 35px;
+        }
+    }
+}

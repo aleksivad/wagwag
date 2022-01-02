@@ -204,6 +204,14 @@
 
         <div class="container user_not_loged" id="main_container">
             <header>
+                <div class="burger_menu"  onclick="openLeftSection()">
+                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M3.9751 5.9751H19.9751" stroke="#888888" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.9751 11.9751H19.9751" stroke="#888888" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M3.9751 17.9751H19.9751" stroke="#888888" stroke-width="2.66667" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+
                 <div class="logo">
                     <img src="./assets/img/logo.png" alt="Logo">
                 </div>
@@ -244,7 +252,13 @@
                     </button>
                 </div>
 
-                <aside class="left_side_box">
+                <aside class="aside" id="left_side_box">
+                    <button class="btn close close_left"   onclick="openLeftSection()">
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M8.49334 0L4.95751 3.535L1.4225 0L0.244171 1.17833L3.77917 4.71333L0.244171 8.24833L1.4225 9.42667L4.95751 5.89167L8.49334 9.42667L9.67167 8.24833L6.13667 4.71333L9.67167 1.17833L8.49334 0Z" fill="#396268"/>
+                        </svg>
+                    </button>
+
                     <div class="section topics">
                         <h3 class="title">Topics</h3>
 
@@ -895,25 +909,26 @@
                             <div class="post_content_options">
                                 <div class="post_content_options_interaction">
                                     <div>Comments (31)</div>
+
+                                    <div class="manage_topic">
+                                        <div class="manage_topic_container delete">
+                                            <i class="fa fa-trash" aria-hidden="true"></i>
+                                            <span>DELETE</span>
+                                            <span>TOPIC</span>
+                                        </div>
+
+                                        <div class="manage_topic_container" id="closed" onclick="closeTopic()">
+                                            <i class="fa fa-check"></i>
+                                            <span>MARK</span>
+                                            <span>TOPIC AS</span>
+                                            <span>CLOSE</span>
+                                        </div>
+                                    </div>
+
                                     <div>Share</div>
                                     <div class="red">Report</div>
                                 </div>
                                 <div class="post_content_options_time">1day ago</div>
-                            </div>
-                        </div>
-
-                        <div class="manage_topic">
-                            <div class="manage_topic_container delete">
-                                <i class="fa fa-trash" aria-hidden="true"></i>
-                                <span>DELETE</span>
-                                <span>TOPIC</span>
-                            </div>
-
-                            <div class="manage_topic_container" id="closed" onclick="closeTopic()">
-                                <i class="fa fa-check"></i>
-                                <span>MARK</span>
-                                <span>TOPIC AS</span>
-                                <span>CLOSE</span>
                             </div>
                         </div>
                     </section>
@@ -997,6 +1012,7 @@
         let closed = document.getElementById('closed');
         let singlePost = document.getElementById('single_post');
         let bubble = document.getElementById('bubble');
+        let leftBox = document.getElementById('left_side_box');
 
         const toggleComments = () => {
             comments.classList.toggle("show_comments");
@@ -1012,6 +1028,10 @@
 
         const openLoginModal = () => {
             main.classList.toggle('blur');
+        }
+
+        const openLeftSection = () => {
+            leftBox.classList.toggle('left_side_box');
         }
 
         //Ovo je funkcija da se ovo dugme moze pomjerati po ekranu. Ako zelite tu funkcionalnost trebace ovo svakako doraditi.

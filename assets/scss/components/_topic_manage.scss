@@ -14,6 +14,7 @@
 
         width: 65px;
         height: 84px;
+        padding: 0px !important;
 
         font-size: 10px;
         font-weight: 700;
@@ -44,6 +45,53 @@
         &.delete {
             background-color: $red;
             color: white;
+            padding: 0;
+        }
+    }
+}
+
+.post_content_options_interaction {
+    .manage_topic {
+        &_container {
+            width: 65px;
+            height: 84px;
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .manage_topic {
+        display: flex;
+        justify-content: flex-start;
+        position: relative;
+        width: 100%;
+
+
+        &_container {
+            &.delete {
+                display: none;
+            }
+            &#closed {
+                display: flex;
+                justify-content: flex-start;
+                background-color: transparent;
+                color: $text_color;
+                border: none;
+                height: auto;
+                width: 100%;
+
+                &::after {
+                    display: flex;
+                    justify-content: flex-start;
+                    width: 100%;
+                    content: 'Close topic';
+                    color: $blue;
+                    font-size: 12px;
+                }
+                i, span {
+                    display: none;
+                }
+            }
         }
     }
 }

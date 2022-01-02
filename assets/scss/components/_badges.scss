@@ -1,42 +1,60 @@
-.badge {
-    display: table-cell;
-    vertical-align: middle;
+.box {
+    margin-left: 10px;
 
-    height: 24px;
-    margin-left: 20px;
-    padding: 3px 5px;
-    border-radius: 5px;
+    .badge {
+        display: table-cell;
+        vertical-align: middle;
 
-    font-size: 15px;
-    font-weight: 900;
-    line-height: 19px;
-    text-transform: uppercase;
+        height: 24px;
+        margin-left: 20px;
+        padding: 3px 5px;
+        border-radius: 5px;
 
-    color: white;
-    background-color: $red;
+        font-size: 15px;
+        font-weight: 900;
+        line-height: 19px;
+        text-transform: uppercase;
 
-    &.blue {
-        background-color: $blue;
+        color: white;
+        background-color: $red;
+
+        &.blue {
+            background-color: $blue;
+        }
+
+        &.purple {
+            background-color: $purple;
+        }
     }
+}
 
-    &.purple {
-        background-color: $purple;
+@media (max-width: 1310px) {
+    .box {
+        margin-left: 0px;
+
+        .badge {
+            margin-left: 0px;
+        }
     }
 }
 
 @media (max-width: 550px) {
-    .badge {
-        height: 20px;
-        padding: 2px 5px;
-        font-size: 12px;
+    .box {
+        .badge {
+            height: 20px;
+            padding: 2px 5px;
+            font-size: 12px;
+        }
     }
 }
 
 @media (max-width: 400px) {
-    .badge {
-        height: 17px;
-        padding: 0px 5px;
-        font-size: 8px;
-        font-weight: bold;
+    .box {
+        .badge {
+            height: 17px;
+            padding: 0px 5px;
+            font-size: 8px;
+            font-weight: bold;
+        }
     }
 }

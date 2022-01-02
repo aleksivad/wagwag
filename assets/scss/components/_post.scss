@@ -135,11 +135,12 @@
 
         &_interaction {
             display: flex;
+            align-items: center;
 
             div {
-                &:nth-child(2) {
-                    padding: 0px 20px;
-                }
+                width: fit-content;
+                padding-right: 20px;
+                white-space: nowrap;
             }
         }
     }
@@ -233,6 +234,11 @@
                 &_interaction {
                     width: 100%;
                     justify-content: space-between;
+
+                    .manage_topic {
+                        width: 100%;
+                    }
+
                     div {
                         &:last-child {
                             display: none;
@@ -273,6 +279,19 @@
                         height: 100%;
                         border-radius: 10px;
                         object-fit: cover;
+                    }
+                }
+            }
+        }
+
+        &_message {
+            .post_content_options_interaction {
+                display: flex;
+                width: fit-content;
+
+                div {
+                    &:last-child {
+                        display: block;
                     }
                 }
             }

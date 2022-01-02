@@ -9,8 +9,14 @@ main {
             padding: 10px 0px;
         }
 
-        &.left_side_box {
+        &.aside {
             padding-top: 60px;
+
+            .btn {
+                &.close_left {
+                    display: none;
+                }
+            }
         }
     }
 
@@ -31,28 +37,44 @@ main {
 }
 
 @media (max-width: 1200px) {
-    aside {
-        display: none;
-        width: 0px;
-        transition: all 0.3;
+    main {
+        aside {
+            display: none;
+            width: 0px;
+            transition: all 0.3;
 
-        &:first-child {
-            display: block;
-            position: fixed;
-            left: 0;
-            top: 0px;
+            &.left_side_box {
+                display: block;
+                position: fixed;
+                left: 0;
+                top: 0px;
 
-            width: 300px;
-            height: 100%;
-            padding: 10px 20px;
+                width: 300px;
+                height: 100%;
+                padding: 10px 20px;
 
-            border-radius: 0px 10px 10px 0px;
+                border-radius: 0px 10px 10px 0px;
 
-            background-color: white;
-            box-shadow: 6px 6px 15px #bebebe;
+                background-color: white;
+                box-shadow: 6px 6px 15px #bebebe;
 
-            overflow: auto;
-            z-index: 2;
+                overflow: auto;
+                z-index: 2;
+
+                .btn {
+                    &.close_left {
+                        display: flex;
+                        justify-content: flex-end;
+                        align-items: center;
+                        width: 100%;
+
+                        svg {
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+            }
         }
     }
 }
